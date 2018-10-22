@@ -1,22 +1,4 @@
 
-//pins for sonars
-int FrontSonar_pin = 38;
-int Left45FrontSonar_pin = 39;
-int LeftSonar_pin = 40;
-int Left45RearSonar_pin = 41;
-int RearSonar_pin = 42;
-int Right45RearSonar_pin = 43;
-int RightSonar_pin = 44;
-int Right45FrontSonar_pin = 45;
-
-float FrontRange;
-float Left45FrontRange;
-float Right45FrontRange;
-float LeftRange;
-float RightRange;
-float Left45RearRange;
-float Right45RearRange;
-float RearRange;
 
 
 
@@ -35,16 +17,18 @@ void sonar_init()
     pinMode(Right45FrontSonar_pin, OUTPUT); 
 }
 
-void ping()
+sonar_t ping()
 {
-    FrontRange = SonarRange(FrontSonar_pin);   
-    Left45FrontRange = SonarRange(Left45FrontSonar_pin);
-    Right45FrontRange = SonarRange(Right45FrontSonar_pin);
-    LeftRange = SonarRange(LeftSonar_pin);
-    RightRange = SonarRange(RightSonar_pin);
-    Left45RearRange = SonarRange(Left45RearSonar_pin);
-    Right45RearRange = SonarRange(Right45RearSonar_pin);
-    RearRange = SonarRange(RearSonar_pin);    
+    sonar_t data;
+    data.FrontRange = SonarRange(FrontSonar_pin);   
+    data.Left45FrontRange = SonarRange(Left45FrontSonar_pin);
+    data.Right45FrontRange = SonarRange(Right45FrontSonar_pin);
+    data.LeftRange = SonarRange(LeftSonar_pin);
+    data.RightRange = SonarRange(RightSonar_pin);
+    data.Left45RearRange = SonarRange(Left45RearSonar_pin);
+    data.Right45RearRange = SonarRange(Right45RearSonar_pin);
+    data.RearRange = SonarRange(RearSonar_pin);    
+    return data;
     
 }
 
