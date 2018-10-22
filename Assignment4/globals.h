@@ -1,3 +1,7 @@
+
+#ifndef _GLOBALS_H
+#define _GLOBALS_H
+
 //  encoder variables
 extern void LogoPrint();
 const int COUNTS_PER_CM = 71;
@@ -50,3 +54,5 @@ typedef struct {
 }sonar_t;
 
 sonar_t sonar_data;
+
+#endif /* _GLOBALS_H */
