@@ -1,4 +1,6 @@
-
+/*
+*   File: encoder.ino
+*/
 
 void encoder_init()
 {
@@ -31,36 +33,48 @@ void encoder_init()
 
 void LtEncoderRead()
 {
-  LtCount += 1;
+    LtCount += 1;
 }
 
 void RtEncoderRead()
 {
-  RtCount += 1;
+    RtCount += 1;
 }
 
 void setMotorSpeeds(int dutyCyclePercent)
 {
-  leftDutyCycle = dutyCyclePercent * 255 / 100;
-  rightDutyCycle = dutyCyclePercent * 255 / 100;
+    leftDutyCycle = dutyCyclePercent * 255 / 100;
+    rightDutyCycle = dutyCyclePercent * 255 / 100;
+}
+
+void writeMotorSpeeds()
+{
+    analogWrite(leftPWM_Pin, leftDutyCycle);
+    analogWrite(rightPWM_Pin, rightDutyCycle);
 }
 
 void rightTurnPivot(int counts)
 {
-  int counts_offset = counts + LtCount;
-  while (LtCount < counts_offset)
-  {
-    analogWrite(rightPWM_Pin, 0);
-    analogWrite(leftPWM_Pin, leftDutyCycle);
-  }
+    int counts_offset = counts + LtCount;
+    while (LtCount < counts_offset)
+    {
+        analogWrite(rightPWM_Pin, 0);
+        analogWrite(leftPWM_Pin, leftDutyCycle);
+    }
 }
 
 void leftTurnPivot(int counts)
 {
-  int counts_offset = counts + RtCount;
-  while (RtCount < counts_offset)
-  {
-    analogWrite(rightPWM_Pin, rightDutyCycle);
-    analogWrite(leftPWM_Pin, 0);
-  }
+    int counts_offset = counts + RtCount;
+    while (RtCount < counts_offset)
+    {
+        analogWrite(rightPWM_Pin, rightDutyCycle);
+        analogWrite(leftPWM_Pin, 0);
+    }
+}
+
+void motor_stop()
+{
+    setMotorSpeeds(0);
+    writeMotorSpeeds();
 }

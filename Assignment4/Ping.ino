@@ -17,6 +17,9 @@ void sonar_init()
     pinMode(Right45FrontSonar_pin, OUTPUT); 
 }
 
+/*
+*   Returns a struct of sonar ranges
+*/
 sonar_t ping()
 {
     sonar_t data;
@@ -28,8 +31,7 @@ sonar_t ping()
     data.Left45RearRange = SonarRange(Left45RearSonar_pin);
     data.Right45RearRange = SonarRange(Right45RearSonar_pin);
     data.RearRange = SonarRange(RearSonar_pin);    
-    return data;
-    
+    return data;    
 }
 
 /*

@@ -2,6 +2,13 @@
 #ifndef _GLOBALS_H
 #define _GLOBALS_H
 
+/*
+*
+* Variables in this file are global to this sketch. Include only once
+*
+*
+*/
+
 //  encoder variables
 extern void LogoPrint();
 const int COUNTS_PER_CM = 71;
@@ -41,8 +48,8 @@ int Right45RearSonar_pin = 43;
 int RightSonar_pin = 44;
 int Right45FrontSonar_pin = 45;
 
-
-typedef struct {
+typedef struct
+{
     float FrontRange;
     float Left45FrontRange;
     float Right45FrontRange;
@@ -51,7 +58,7 @@ typedef struct {
     float Left45RearRange;
     float Right45RearRange;
     float RearRange;
-}sonar_t;
+} sonar_t;
 
 sonar_t sonar_data;
 
