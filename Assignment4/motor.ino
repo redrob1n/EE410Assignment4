@@ -1,8 +1,8 @@
 /*
-*   File: encoder.ino
+*   File: motor.ino
 */
 
-void encoder_init()
+void motor_init()
 {
     attachInterrupt(1, LtEncoderRead, RISING); //pin 3
     attachInterrupt(0, RtEncoderRead, RISING); //pin 2
