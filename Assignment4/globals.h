@@ -48,6 +48,9 @@ int Right45RearSonar_pin = 43;
 int RightSonar_pin = 44;
 int Right45FrontSonar_pin = 45;
 
+//array for reading ping
+int sonarRead[8];
+
 typedef struct
 {
     float FrontRange;

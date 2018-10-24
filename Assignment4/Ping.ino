@@ -20,18 +20,16 @@ void sonar_init()
 /*
 *   Returns a struct of sonar ranges
 */
-sonar_t ping()
+void ping()
 {
-    sonar_t data;
-    data.FrontRange = SonarRange(FrontSonar_pin);   
-    data.Left45FrontRange = SonarRange(Left45FrontSonar_pin);
-    data.Right45FrontRange = SonarRange(Right45FrontSonar_pin);
-    data.LeftRange = SonarRange(LeftSonar_pin);
-    data.RightRange = SonarRange(RightSonar_pin);
-    data.Left45RearRange = SonarRange(Left45RearSonar_pin);
-    data.Right45RearRange = SonarRange(Right45RearSonar_pin);
-    data.RearRange = SonarRange(RearSonar_pin);    
-    return data;    
+    sonarRead[0] = SonarRange(FrontSonar_pin);   
+    sonarRead[1] = SonarRange(Left45FrontSonar_pin);
+    sonarRead[2] = SonarRange(Right45FrontSonar_pin);
+    sonarRead[3] = SonarRange(LeftSonar_pin);
+    sonarRead[4] = SonarRange(RightSonar_pin);
+    sonarRead[5] = SonarRange(Left45RearSonar_pin);
+    sonarRead[6] = SonarRange(Right45RearSonar_pin);
+    sonarRead[7] = SonarRange(RearSonar_pin);   
 }
 
 /*
