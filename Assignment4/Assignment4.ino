@@ -2,7 +2,7 @@
 *
 *
 *
-* comment
+*
 *
 */
 #include "globals.h"
@@ -21,10 +21,11 @@ void loop()
 
   for (;;)
   {
-    sonar_data = ping();
+    ping();
     if (checkForForwardCollisions())
     {
       motor_stop();
     }
+    
   }
 }
