@@ -2,7 +2,7 @@
 *
 *
 *
-* comment
+*
 *
 */
 #include "globals.h"
@@ -26,5 +26,6 @@ void loop()
     {
       motor_stop();
     }
+    
   }
 }

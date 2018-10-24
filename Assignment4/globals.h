@@ -51,18 +51,4 @@ int Right45FrontSonar_pin = 45;
 //array for reading ping
 int sonarRead[8];
 
-typedef struct
-{
-    float FrontRange;
-    float Left45FrontRange;
-    float Right45FrontRange;
-    float LeftRange;
-    float RightRange;
-    float Left45RearRange;
-    float Right45RearRange;
-    float RearRange;
-} sonar_t;
-
-sonar_t sonar_data;
-
 #endif /* _GLOBALS_H */
