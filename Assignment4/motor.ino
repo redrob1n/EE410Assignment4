@@ -14,8 +14,8 @@ void motor_init()
     pinMode(rightPWM_Pin, OUTPUT);
 
     //initialize motor speeds to equal values
-    leftDutyCyclePercent = 20;
-    rightDutyCyclePercent = 20;
+    leftDutyCyclePercent = 25;
+    rightDutyCyclePercent = 25;
     leftDutyCycle = leftDutyCyclePercent * 255 / 100;
     rightDutyCycle = rightDutyCyclePercent * 255 / 100;
 
