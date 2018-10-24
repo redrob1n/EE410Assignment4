@@ -1,7 +1,3 @@
-
-
-
-
 /*
 * initializes sonar pins 
 */
