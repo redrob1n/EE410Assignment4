@@ -25,7 +25,7 @@ void ping()
     sonarRead[4] = SonarRange(RearSonar_pin);
     sonarRead[5] = SonarRange(Right45RearSonar_pin);
     sonarRead[6] = SonarRange(RightSonar_pin);
-    sonarRead[7] = SonarRange(Rear45FrontSonar_pin);   
+    sonarRead[7] = SonarRange(Right45FrontSonar_pin);   
 }
 
 /*

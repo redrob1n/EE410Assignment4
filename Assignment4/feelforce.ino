@@ -17,7 +17,7 @@ void Feelforce()
     angle =+ PI/4;
   }
 
-  squares = (forceX*forceX)+(forceY*forceY)
+  squares = (forceX*forceX)+(forceY*forceY);
   force = sqrt(squares);
   vectorAngle = atan2(-forceY, -forceX);
 }

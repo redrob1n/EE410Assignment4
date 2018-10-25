@@ -26,6 +26,5 @@ void loop()
     {
       motor_stop();
     }
-    
-  }
+    }
 }
