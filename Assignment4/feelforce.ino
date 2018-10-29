@@ -1,4 +1,4 @@
-void Feelforce()
+float feelForce()
 {
   float forceI[8];
   float forceX = 0;
@@ -15,10 +15,16 @@ void Feelforce()
     forceX =+ (forceI[i]*cos(angle));
     forceY =+ (forceI[i]*sin(angle));
     angle =+ PI/4;
+    
   }
 
   squares = (forceX*forceX)+(forceY*forceY);
-  force = sqrt(squares);
-  vectorAngle = atan2(-forceY, -forceX);
+  force = sqrt(squares); //magnitude
+  vectorAngle = atan2(-forceY, -forceX);//theta
+  
+  return force;
+  return vectorAngle;
+//To print if needed
+  //serial.println(vectorAngle);
 }
 
