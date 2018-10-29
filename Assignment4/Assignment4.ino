@@ -12,7 +12,7 @@ void setup()
   Serial.begin(9600);
   Serial1.begin(9600);
 
-  //motor_init();
+  motor_init();
   sonar_init();
 }
 
