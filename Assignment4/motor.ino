@@ -53,26 +53,6 @@ void writeMotorSpeeds()
     analogWrite(rightPWM_Pin, rightDutyCycle);
 }
 
-void rightTurnPivot(int counts)
-{
-    int counts_offset = counts + LtCount;
-    while (LtCount < counts_offset)
-    {
-        analogWrite(rightPWM_Pin, 0);
-        analogWrite(leftPWM_Pin, leftDutyCycle);
-    }
-}
-
-void leftTurnPivot(int counts)
-{
-    int counts_offset = counts + RtCount;
-    while (RtCount < counts_offset)
-    {
-        analogWrite(rightPWM_Pin, rightDutyCycle);
-        analogWrite(leftPWM_Pin, 0);
-    }
-}
-
 void motor_stop()
 {
     setMotorSpeeds(0);

@@ -21,10 +21,12 @@ void loop()
   for (;;)
   {
     ping();
-    /*if (checkForForwardCollisions())
+    
+    if (checkForForwardCollisions())
     {
       motor_stop();
-    }*/
+    }
+
     feelForce();
     delay(20);
     }
