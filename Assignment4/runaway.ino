@@ -3,12 +3,11 @@ float runAway(float feelForce)
 {
 
 
-if()
-
+    if(false) //dummy for compile
     {
         return vectorAngle;
     }
-if()
+    if(false) //dummy for compile
     {
         return vectorAngle;
     }

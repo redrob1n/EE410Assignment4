@@ -17,11 +17,10 @@ void setup()
 }
 
 void loop()
-{
-  ping();
+{  
   for (;;)
   {
-    //ping();
+    ping();
     /*if (checkForForwardCollisions())
     {
       motor_stop();
