@@ -14,6 +14,9 @@
                 "C:\\Users\\cellis\\Documents\\Arduino\\hardware\\tools\\**",
                 "C:\\Users\\cellis\\Documents\\Arduino\\libraries\\**"
             ],
+            "browse": {
+                "limitSymbolsToIncludedHeaders": false
+            },
             "forcedInclude": [
                 "C:\\Program Files (x86)\\Arduino\\hardware\\arduino\\avr\\cores\\arduino\\Arduino.h"
             ],
