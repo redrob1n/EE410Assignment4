@@ -31,6 +31,8 @@ void rightTurnSpin(int counts)
         analogWrite(rightPWM_Pin, rightDutyCycle);
         analogWrite(leftPWM_Pin, leftDutyCycle);        
     }
+
+    digitalWrite(rightDir_Pin, HIGH);
 }
 
 void leftTurnSpin(int counts)
@@ -44,4 +46,6 @@ void leftTurnSpin(int counts)
         analogWrite(rightPWM_Pin, rightDutyCycle);
         analogWrite(leftPWM_Pin, leftDutyCycle);
     }
+
+    digtialWrite(leftDir_Pin, HIGH);
 }
