@@ -1,9 +1,6 @@
 /*
 *
 *
-*
-*
-*
 */
 #include "globals.h"
 
@@ -14,6 +11,8 @@ void setup()
 
   //motor_init();
   sonar_init();
+
+  //Make 0 for runaway and 1 for Wander
   suppressionNode = 0;
 }
 
@@ -21,12 +20,22 @@ void loop()
 {
   for (;;)
   {
-    /*ping();
-    if (checkForForwardCollisions())
+    switch(suppressionNode)
     {
-      motor_stop();
-    }*/
-    
-    feelForce();
+      //runaway section
+      case 0:
+        feelforce();
+
+
+        break;
+        
+      //Wander section
+      case 1:
+        feelforce();
+
+
+        break;
+    }
+
   }
 }
