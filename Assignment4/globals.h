@@ -1,4 +1,3 @@
-
 #ifndef _GLOBALS_H
 #define _GLOBALS_H
 
@@ -50,5 +49,7 @@ int Right45FrontSonar_pin = 45;
 
 //array for reading ping
 int sonarRead[8];
+
+int vectorAngle;
 
 #endif /* _GLOBALS_H */

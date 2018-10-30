@@ -5,7 +5,7 @@
 *
 *
 */
-#include <globals.h>
+#include "globals.h"
 
 void setup()
 {
@@ -18,16 +18,14 @@ void setup()
 
 void loop()
 {
-  ping();
   for (;;)
   {
-    //ping();
-    /*if (checkForForwardCollisions())
+    /*ping();
+    if (checkForForwardCollisions())
     {
       motor_stop();
     }*/
+    
     feelForce();
-    delay(20);
-    }
-
+  }
 }
