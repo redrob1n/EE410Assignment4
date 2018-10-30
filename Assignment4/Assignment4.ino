@@ -10,6 +10,14 @@ loop() function is used to call the rest of the functions
 #define layer0
 #define layer1
 
+void beep()
+{
+  analogWrite(buzzer_Pin, 20);
+  delay(50);
+  analogWrite(buzzer_Pin, 0);
+  delay(50);
+}
+
 //int activestage = layer0;
 void setup()
 {
@@ -18,7 +26,7 @@ void setup()
 
   motor_init();
   sonar_init(); 
-  pinMode(buzzer_Pin, OUTPUT);
+  pinMode(buzzer_Pin, OUTPUT); // setup buzzer
   //Make 0 for runaway and 1 for Wander
   suppressionNode = 0;
 }
