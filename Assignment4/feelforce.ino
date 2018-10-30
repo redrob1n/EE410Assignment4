@@ -12,23 +12,7 @@ float feelForce()
 
   ping();
   for(int i = 0; i < 8; i++){
-<<<<<<< Updated upstream
-    forceI[i] = k/(sonarRead[i]);
-    forceX =+ (forceI[i]*cos(angle));
-    forceY =+ (forceI[i]*sin(angle));
-    angle =+ PI/4;
-    
-  }
-
-  squares = (forceX*forceX)+(forceY*forceY);
-  force = sqrt(squares); //magnitude
-  vectorAngle = atan2(-forceY, -forceX);//theta
   
-  return force;
-  return vectorAngle;
-//To print if needed
-  //serial.println(vectorAngle);
-=======
     forceI[i] = k/(sonarRead[i]*sonarRead[i]);
     forceX += (forceI[i]*cos(angle));
     forceY += (forceI[i]*sin(angle));
@@ -41,7 +25,6 @@ float feelForce()
   vectorAngle = atan2(-forceY, -forceX);
   vectorAngle = vectorAngle*57.2958;
 
-  //Serial.println(vectorAngle);
->>>>>>> Stashed changes
+  Serial.println(vectorAngle);
 }
 
