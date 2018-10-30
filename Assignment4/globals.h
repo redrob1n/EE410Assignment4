@@ -52,6 +52,7 @@ int sonarRead[8];
 
 double vectorAngle;
 
+float force;
 int suppressionNode;
 
 #endif /* _GLOBALS_H */

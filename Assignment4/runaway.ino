@@ -1,11 +1,13 @@
- 
+//returning theta 
 
 
-float runAway()//float feelForce)
+float runAway(float feelForce)
 {
-    //5.576 counts per degree
+
+    //5.576*2.54
     float newCount=14.16*vectorAngle;
-    if(vectorAngle<0)
+
+    if(vectorAngle < 0)
     {
         newCount = abs(newCount);
         rightTurnSpin(newCount);
@@ -14,9 +16,16 @@ float runAway()//float feelForce)
     {
         leftTurnSpin(newCount);
     }
-    return 0;
+
+    for(i=0; i<force/10 || i<5; i++)
+    {
+        ping();
+        if(checkForForwardCollisions())
+        {
+            motor_stop();
+            break;
+        }
+    }
+
+    motor_stop();
 }
-
-
-
-    

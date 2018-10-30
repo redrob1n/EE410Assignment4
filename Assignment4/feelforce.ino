@@ -3,8 +3,8 @@ void feelForce()
   float forceI[8];
   float forceX = 0;
   float forceY = 0;
-  float force, squares; 
-  double vectorAngle, angle;
+  float squares; 
+  double angle;
   float k;
   
   k = 10000;

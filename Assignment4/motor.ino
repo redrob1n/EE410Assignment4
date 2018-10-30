@@ -24,8 +24,7 @@ void motor_init()
     digitalWrite(rightDir_Pin, HIGH);
 
     // turn on motors
-    analogWrite(leftPWM_Pin, leftDutyCycle);
-    analogWrite(rightPWM_Pin, rightDutyCycle);
+    motor_stop();
 
     LtCount = 0;
     RtCount = 0;

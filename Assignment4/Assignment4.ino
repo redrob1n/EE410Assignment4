@@ -24,8 +24,8 @@ void setup()
 void loop()
 {
 
-  feelForce();
-  runAway(vectorAngle);
+  //feelForce();
+  //runAway(vectorAngle);
 
   for (;;)
   {
@@ -33,15 +33,18 @@ void loop()
     {
       //runaway section
       case 0:
-        //feelForce();
-        //runAway();
+      {        
+        feelForce();
+        if(force > 15)
+          runAway();
 
         break;
-        
+      }
       //Wander section
       case 1:
         feelForce();
-
+        wanderHeading = wander();
+        avoid(wanderHeading, vectorAngle);
 
         break;
     }
