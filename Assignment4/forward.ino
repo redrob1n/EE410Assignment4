@@ -3,7 +3,7 @@ void forwardRunAway()
 {
     digitalWrite(leftDir_Pin,HIGH);
     digitalWrite(rightDir_Pin,HIGH);
-    
+        
     analogWrite(leftPWM_Pin,30);
     analogWrite(rightPWM_pin,30);
 
