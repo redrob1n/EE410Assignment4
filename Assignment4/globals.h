@@ -22,6 +22,8 @@ int leftPWM_Pin = 9;
 int rightDir_Pin = 10;
 int rightPWM_Pin = 11;
 
+int buzzer_Pin = 7;
+
 int leftDutyCyclePercent;
 int rightDutyCyclePercent;
 int leftDutyCycle;
@@ -51,8 +53,10 @@ int Right45FrontSonar_pin = 45;
 int sonarRead[8];
 
 double vectorAngle;
-
 float force;
+
+float wanderHeading;
+
 int suppressionNode;
 
 #endif /* _GLOBALS_H */

@@ -5,7 +5,7 @@ void avoid(float WanderAngle, float FeelAngle)
   float newCount=14.16*avoidAngle;
     setMotorSpeeds(25);
     writeMotorSpeeds();
-    if(avoidAngle<0)
+    if(avoidAngle < 0)
     {
         newCount = abs(newCount);
         rightTurnSpin(newCount);
@@ -31,10 +31,12 @@ void avoid(float WanderAngle, float FeelAngle)
     }
 
     motor_stop();
+    delay(4000);
 }
 
 void avoidCollision()
 {
+  int j;
   motor_stop();
   digitalWrite(leftDir_Pin, LOW);
   digitalWrite(rightDir_Pin, LOW);
@@ -42,8 +44,13 @@ void avoidCollision()
   setMotorSpeeds(25);
   writeMotorSpeeds();
 
-  for(j=0;j<5;j++)
+  for(j=0;j<2;j++)
   {
-    
+    ping();
   }
+
+  //motor_stop();
+
+  leftTurnSpin(2548);
+
 }

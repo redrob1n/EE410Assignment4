@@ -14,19 +14,14 @@ void setup()
   Serial1.begin(9600);
 
   motor_init();
-  sonar_init();
-
-  
+  sonar_init(); 
+  pinMode(buzzer_Pin, OUTPUT);
   //Make 0 for runaway and 1 for Wander
   suppressionNode = 0;
 }
 
 void loop()
-{
-
-  //feelForce();
-  //runAway(vectorAngle);
-
+{  
   for (;;)
   {
     switch(suppressionNode)
@@ -42,11 +37,12 @@ void loop()
       }
       //Wander section
       case 1:
+      {
         feelForce();
         wanderHeading = wander();
-        avoid(wanderHeading, vectorAngle);
-
+        avoid(wanderHeading, vectorAngle); 
         break;
+      }
     }
 
   }

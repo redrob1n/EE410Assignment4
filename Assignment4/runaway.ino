@@ -1,12 +1,13 @@
 //returning theta 
 
 
-float runAway(float feelForce)
+float runAway()
 {
-
+    int i;
     //5.576*2.54
     float newCount=14.16*vectorAngle;
-
+    setMotorSpeeds(25);
+    writeMotorSpeeds();
     if(vectorAngle < 0)
     {
         newCount = abs(newCount);
@@ -28,4 +29,4 @@ float runAway(float feelForce)
     }
 
     motor_stop();
-}
+}    

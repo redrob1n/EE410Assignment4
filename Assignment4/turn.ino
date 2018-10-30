@@ -33,6 +33,8 @@ void rightTurnSpin(int counts)
     }
 
     digitalWrite(rightDir_Pin, HIGH);
+    LtCount = 0;
+    RtCount = 0;
 }
 
 void leftTurnSpin(int counts)
@@ -48,4 +50,6 @@ void leftTurnSpin(int counts)
     }
 
     digitalWrite(leftDir_Pin, HIGH);
+    LtCount = 0;
+    RtCount = 0;
 }
