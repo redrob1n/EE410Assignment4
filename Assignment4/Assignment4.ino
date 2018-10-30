@@ -1,16 +1,13 @@
 /*
 *
 *
-*
-*
-*
 */
 #include "globals.h"
 
 #define layer0
 #define layer1
 
-int activestage = layer0;
+//int activestage = layer0;
 void setup()
 {
   Serial.begin(9600);
@@ -18,20 +15,36 @@ void setup()
 
   motor_init();
   sonar_init();
+
+  
+  //Make 0 for runaway and 1 for Wander
+  suppressionNode = 0;
 }
 
 void loop()
 {
+
+  feelForce();
+  runAway(vectorAngle);
+
   for (;;)
   {
-    ping();
-    //collideFlagLayer0 = checkForForwardCollisions();
-    if (checkForForwardCollisions())
+    switch(suppressionNode)
     {
-      motor_stop();
+      //runaway section
+      case 0:
+        //feelForce();
+        //runAway();
+
+        break;
+        
+      //Wander section
+      case 1:
+        feelForce();
+
+
+        break;
     }
-    
-    feelForce();
-    turn();
+
   }
 }

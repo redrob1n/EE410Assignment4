@@ -1,4 +1,4 @@
-float feelForce()
+void feelForce()
 {
   float forceI[8];
   float forceX = 0;
@@ -7,7 +7,7 @@ float feelForce()
   double vectorAngle, angle;
   float k;
   
-  k = 100;
+  k = 10000;
   angle = 0;
 
   ping();
@@ -24,7 +24,7 @@ float feelForce()
   force = sqrt(squares);
   vectorAngle = atan2(-forceY, -forceX);
   vectorAngle = vectorAngle*57.2958;
-
-  Serial.println(vectorAngle);
+  
+  Serial.println(force);
 }
 

@@ -5,13 +5,13 @@ void forwardRunAway()
     digitalWrite(rightDir_Pin,HIGH);
 
     analogWrite(leftPWM_Pin,leftDutyCycle);
-    analogWrite(rightPWM_pin,rightDutyCycle);
+    analogWrite(rightPWM_Pin,rightDutyCycle);
 
     delay(1000);
 
 //makes it stop
     analogWrite(leftPWM_Pin,0);
-    analogWrite(rightPWM_Pin,0)
+    analogWrite(rightPWM_Pin,0);
 }
 
 void forwardCollide()
@@ -21,7 +21,7 @@ void forwardCollide()
     digitalWrite(rightDir_Pin,HIGH);
 
     analogWrite(leftPWM_Pin,leftDutyCycle);
-    analogWrite(rightPWM_pin,rightDutyCycle);
+    analogWrite(rightPWM_Pin,rightDutyCycle);
 
     while(1)
     {

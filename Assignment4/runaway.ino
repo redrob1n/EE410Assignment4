@@ -1,17 +1,22 @@
-//returning theta 
+ 
 
 
-float runAway(float feelForce)
+float runAway()//float feelForce)
 {
-
-
-    if(false) //dummy for compile
+    //5.576 counts per degree
+    float newCount=14.16*vectorAngle;
+    if(vectorAngle<0)
     {
-        return vectorAngle;
+        newCount = abs(newCount);
+        rightTurnSpin(newCount);
     }
-    if(false) //dummy for compile
+    else
     {
-        return vectorAngle;
+        leftTurnSpin(newCount);
     }
-
+    return 0;
 }
+
+
+
+    

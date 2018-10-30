@@ -2,9 +2,9 @@
 
 float wander()
 {
-    float head = random(0,360);
+    float head = random(-180,180);
 
-    return (head * 3.14)/180;
+    return head;
 
 
 }
