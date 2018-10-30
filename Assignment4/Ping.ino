@@ -1,5 +1,6 @@
 /*
-* initializes sonar pins 
+*  
+Ping initializes the sonar reads and outputs it in an array
 */
 void sonar_init()
 {
@@ -18,6 +19,9 @@ void sonar_init()
 */
 void ping()
 {
+    //Stores the distances into an array where 
+    // sonarRead[0] is the distance from front sonar 
+    //to the object in cm.
     sonarRead[0] = SonarRange(FrontSonar_pin);   
     sonarRead[1] = SonarRange(Left45FrontSonar_pin);
     sonarRead[2] = SonarRange(LeftSonar_pin);

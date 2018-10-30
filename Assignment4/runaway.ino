@@ -1,10 +1,15 @@
-//returning theta 
+ 
+/*
+//returning theta
+runaway grabs the value from feelForce vectorAngle
+to determine right or left turn spin.
 
+*/
 
 float runAway()
 {
     int i;
-    //5.576*2.54
+    
     float newCount=14.16*vectorAngle;
     setMotorSpeeds(25);
     writeMotorSpeeds();

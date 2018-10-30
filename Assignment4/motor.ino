@@ -1,5 +1,6 @@
 /*
 *   File: motor.ino
+This file includes the motor speed, control and pins.
 */
 
 void motor_init()
@@ -29,29 +30,29 @@ void motor_init()
     LtCount = 0;
     RtCount = 0;
 }
-
+//left encoder
 void LtEncoderRead()
 {
     LtCount += 1;
 }
-
+//right encoder
 void RtEncoderRead()
 {
     RtCount += 1;
 }
-
+//sets dutycycle according to a duty cycle percentage.
 void setMotorSpeeds(int dutyCyclePercent)
 {
     leftDutyCycle = dutyCyclePercent * 255 / 100;
     rightDutyCycle = dutyCyclePercent * 255 / 100;
 }
-
+//writes to the motors, will output speed of the rotation
 void writeMotorSpeeds()
 {
     analogWrite(leftPWM_Pin, leftDutyCycle);
     analogWrite(rightPWM_Pin, rightDutyCycle);
 }
-
+//stops the motor
 void motor_stop()
 {
     setMotorSpeeds(0);

@@ -1,6 +1,9 @@
 /*
-*
-*
+This is our main function where we call our other functions
+setup() include the serial monitor and motor,sonar functions 
+loop() function is used to call the rest of the functions
+ 
+
 */
 #include "globals.h"
 

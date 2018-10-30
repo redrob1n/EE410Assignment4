@@ -1,4 +1,10 @@
+/*
+Input: counts
+Output: Spin, duty cycle 
 
+Values were passed from runaway to turn to determine which
+spin or pivot it would run
+*/
 
 void rightTurnPivot(int counts)
 {

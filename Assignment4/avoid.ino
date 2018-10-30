@@ -1,12 +1,20 @@
+/*
+Wander module passes a value to avoid function which is an
+angle in radians.
+Then we use counts to determine how far it needs to be traveled
+for a certain angle
+
+*/
 void avoid(float WanderAngle, float FeelAngle)
 {
   float avoidAngle = (WanderAngle + FeelAngle)/2;
-  
+
   float newCount=14.16*avoidAngle;
     setMotorSpeeds(25);
     writeMotorSpeeds();
     if(avoidAngle < 0)
     {
+      //It will turn right for an angle less than 0
         newCount = abs(newCount);
         rightTurnSpin(newCount);
     }
@@ -18,7 +26,6 @@ void avoid(float WanderAngle, float FeelAngle)
         for(float i=0;i<force/10 || i<5;i++)
     {        
         ping();
-        Serial.println("Harry's a bitch");
         Serial.print("Force: ");
         Serial.println(force);
         Serial.print("i: ");
@@ -34,6 +41,10 @@ void avoid(float WanderAngle, float FeelAngle)
     delay(4000);
 }
 
+/* This avoids collision using the leftTurnSpin function.
+//If the object is close using the "checkForForwardCollisions"
+which uses sonar reads to use this function. 
+*/
 void avoidCollision()
 {
   int j;
