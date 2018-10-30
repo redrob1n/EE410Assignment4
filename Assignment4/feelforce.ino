@@ -7,7 +7,7 @@ float feelForce()
   double vectorAngle, angle;
   float k;
   
-  k = 100;
+  k = 10000;
   angle = 0;
 
   ping();
@@ -25,6 +25,6 @@ float feelForce()
   vectorAngle = atan2(-forceY, -forceX);
   vectorAngle = vectorAngle*57.2958;
 
-  Serial.println(vectorAngle);
+  Serial.println(force);
 }
 

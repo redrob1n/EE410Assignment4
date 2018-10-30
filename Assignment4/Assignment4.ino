@@ -14,6 +14,7 @@ void setup()
 
   //motor_init();
   sonar_init();
+  suppressionNode = 0;
 }
 
 void loop()

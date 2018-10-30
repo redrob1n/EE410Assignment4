@@ -50,6 +50,8 @@ int Right45FrontSonar_pin = 45;
 //array for reading ping
 int sonarRead[8];
 
-int vectorAngle;
+double vectorAngle;
+
+int suppressionNode;
 
 #endif /* _GLOBALS_H */
