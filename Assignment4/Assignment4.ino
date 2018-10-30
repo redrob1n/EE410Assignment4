@@ -17,11 +17,11 @@ void setup()
 }
 
 void loop()
-{  
+{
   for (;;)
   {
     ping();
-    
+
     if (checkForForwardCollisions())
     {
       motor_stop();
@@ -29,6 +29,5 @@ void loop()
 
     feelForce();
     delay(20);
-    }
-
+  }
 }
