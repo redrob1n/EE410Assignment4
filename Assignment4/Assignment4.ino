@@ -14,30 +14,19 @@ void setup()
 
   //motor_init();
   sonar_init();
+  suppressionNode = 0;
 }
 
 void loop()
 {
   for (;;)
   {
-<<<<<<< Updated upstream
-    ping();
-
-    if (checkForForwardCollisions())
-    {
-      motor_stop();
-    }
-
-    feelForce();
-    delay(20);
-=======
     /*ping();
     if (checkForForwardCollisions())
     {
       motor_stop();
     }*/
-
-    Feelforce();
->>>>>>> Stashed changes
+    
+    feelForce();
   }
 }
